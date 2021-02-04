@@ -6,7 +6,7 @@ env:
   - DJANGO_VERSION=3.0.4
 install:
   - pip install -q Django==$DJANGO_VERSION
-  - python manage.py -q install
+  - pipenv install
 # command to run tests
 script: 
   - python manage.py test
