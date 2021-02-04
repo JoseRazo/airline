@@ -2,12 +2,12 @@ language: python
 
 python:
   - "3.8"
-
 env:
-  - DJANGO=3.0 DB=sql_server
+  - SECRET_KEY='TEST'
+services:
+  - sql_server
 install:
-  - pip install -q Django==$DJANGO --use-mirrors
-  - pip install -q . --use-mirrors
-  - pip install -q -r requirements.txt --use-mirrors
+  - pipenv install
 # command to run tests
-script: python manage.py test
+script: 
+  - python manage.py test
