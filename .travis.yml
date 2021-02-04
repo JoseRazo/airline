@@ -2,8 +2,11 @@ language: python
 
 python:
   - "3.8"
+env:
+  - DJANGO_VERSION=3.0.4
 install:
-  - pipenv install
+  - pip install -q Django==$DJANGO_VERSION
+  - python manage.py -q install
 # command to run tests
 script: 
   - python manage.py test
