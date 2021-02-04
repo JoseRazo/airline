@@ -74,6 +74,7 @@ WSGI_APPLICATION = 'airline.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
@@ -86,6 +87,18 @@ DATABASES = {
         'OPTIONS': {
             'driver': 'ODBC Driver 13 for SQL Server',
         },
+    }
+}
+"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'biblioteca',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
