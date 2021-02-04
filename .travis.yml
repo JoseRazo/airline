@@ -4,7 +4,7 @@ python:
   - "3.8"
 
 env:
-  - DJANGO=3.0.4 DB=sql_server
+  - DJANGO=3.0 DB=sql_server
 install:
   - pip install -q Django==$DJANGO --use-mirrors
   - pip install -q . --use-mirrors
