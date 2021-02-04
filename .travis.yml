@@ -10,4 +10,4 @@ install:
   - pipenv install
 # command to run tests
 script: 
-  - python manage.py tes
+  - python manage.py test
