@@ -1,10 +1,10 @@
 from django.db.models import Max
 from django.test import Client, TestCase
-from .models import Airport, Flight, Passenger
+#from .models import Airport, Flight, Passenger
 
 # Create your tests here.
 class ModelsTestCase(TestCase):
-
+"""
     def setUp(self):
 
         # Create airports
@@ -40,7 +40,7 @@ class ModelsTestCase(TestCase):
         a2 = Airport.objects.get(code="BBB")
         f = Flight.objects.get(origin=a1, destination=a2, duration=-100)
         self.assertFalse(f.is_valid_flight())
-
+"""
     def test_index(self):
         c = Client()
         response = c.get("/")
